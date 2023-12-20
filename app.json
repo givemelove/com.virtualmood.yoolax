@@ -1,0 +1,130 @@
+{
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
+  "id": "com.virtualmood.yoolax",
+  "version": "1.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "platforms": [
+    "local"
+  ],
+  "name": {
+    "en": "Yoolax Zigbee Module"
+  },
+  "description": {
+    "en": "Adds support for Yoolax shades with a Zigbee module."
+  },
+  "category": [
+    "climate"
+  ],
+  "permissions": [],
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
+  "author": {
+    "name": "Nicky Parseghian",
+    "email": "nicky@parseghian.net"
+  },
+  "drivers": [
+    {
+      "name": {
+        "en": "D10110"
+      },
+      "class": "blinds",
+      "capabilities": [
+        "measure_battery",
+        "alarm_battery",
+        "windowcoverings_set"
+      ],
+      "images": {
+        "small": "/drivers/d10110/assets/images/small.png",
+        "large": "/drivers/d10110/assets/images/large.png",
+        "xlarge": "/drivers/d10110/assets/images/xlarge.png"
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "yooksmart"
+        ],
+        "productId": [
+          "D10110"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              3,
+              4,
+              5,
+              32,
+              33,
+              258
+            ],
+            "bindings": [
+              258
+            ]
+          }
+        }
+      },
+      "id": "d10110",
+      "settings": [
+        {
+          "id": "reverse",
+          "type": "radio",
+          "label": {
+            "en": "Motor moves in reverse direction",
+            "nl": "Motor beweegt in omgekeerde richting",
+            "fr": "Le moteur est inversé"
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Off",
+                "nl": "Uit",
+                "fr": "Non"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "On",
+                "nl": "Aan",
+                "fr": "Oui"
+              }
+            }
+          ]
+        },
+        {
+          "id": "batteryThreshold",
+          "type": "number",
+          "label": {
+            "en": "Battery Low Alarm Voltage Threshold (%)"
+          },
+          "hint": {
+            "en": "This setting determines the threshold before a battery alarm is given."
+          },
+          "value": 20,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 99
+          }
+        }
+      ]
+    }
+  ]
+}

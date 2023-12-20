@@ -1,0 +1,54 @@
+{
+  "name": {
+    "en": "D10110"
+  },
+  "class": "blinds",
+  "capabilities": [
+    "measure_battery",
+    "alarm_battery",
+    "windowcoverings_set"
+  ],
+  "images": {
+      "large": "{{driverAssetsPath}}/images/large.png",
+      "small": "{{driverAssetsPath}}/images/small.png"
+    },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
+  "images": {
+    "small": "{{driverAssetsPath}}/images/small.png",
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "xlarge": "{{driverAssetsPath}}/images/xlarge.png"
+  },
+  "energy": {
+    "batteries": ["OTHER"]
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "yooksmart"
+    ],
+    "productId": [
+      "D10110"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          32,
+          33,
+          258
+        ],
+        "bindings": [
+          258
+        ]
+      }
+    }
+  }
+}
